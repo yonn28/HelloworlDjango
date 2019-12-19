@@ -12,13 +12,13 @@ class MascotaForm(forms.ModelForm):
             'edad_aproximada',
             'fecha_rescate',
             'persona',
-            'vacuna'
+            'vacuna',
         ]
         labels ={
             'nombre':'Nombre',
             'sexo': 'Sexo',
             'edad_aproximada':'Edad aproximada',
-            'fecha_rescate':'Fecha de rescate',
+            'fecha_rescate':'Fecha de rescate Formato AAAA-MM-DD',
             'persona':'Adoptante',
             'vacuna':'Vacunas'
         }

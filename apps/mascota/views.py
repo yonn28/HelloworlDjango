@@ -14,7 +14,7 @@ def mascota_view(request):
         form = MascotaForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('mascota:mascota')
+        return redirect('index')
     else:
         form=MascotaForm()       
     return render(request, 'mascota/mascota_form.html',{'form':form})

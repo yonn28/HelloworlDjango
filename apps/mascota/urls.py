@@ -2,6 +2,6 @@ from django.urls import path
 from apps.mascota.views import index, mascota_view
 
 urlpatterns = [
-    path('', index, name='mascota'),
+    path('', index, name='index'),
     path('nuevo', mascota_view, name='mascota_crear'),
 ]
