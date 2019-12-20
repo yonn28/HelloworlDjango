@@ -34,5 +34,12 @@ def mascota_edit(request, pk):
         form=MascotaForm(request.POST,instance=mascota)
         if form.is_valid():
             form.save()
-        return redirect('mascota_listar')
+        return redirect('mascota:mascota_listar')
     return render(request,'mascota/mascota_form.html',{'form':form})
+
+def mascota_delete(request, id_mascota):
+    mascota=Mascota.objects.get(id=id_mascota)
+    if request.method == 'POST':
+        mascota.delete()
+        return redirect('mascota:mascota_listar')
+    return render(request,'mascota/mascota_delete.html',{'mascota':mascota})

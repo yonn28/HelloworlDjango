@@ -25,7 +25,11 @@
             <td>{{mascota.edad_aproximada}}</td>
 			<td>{{mascota.fecha_rescate}}</td>
 			<td>{{mascota.vacuna}}</td>
-            <td>{{mascota.persona.nombre}}{{mascota.persona.apellidos}}</td>
+			<td>{{mascota.persona.nombre}}{{mascota.persona.apellidos}}</td>
+			<td>
+				<a class="btn btn-primary" href="{%url 'mascota:mascota_editar' mascota.id%}">editar</a> 
+				<a class="btn btn-danger"  href="{%url 'mascota:mascota_borrar' mascota.id%}">Borrar</a>
+			</td>
 		</tr>
 		{% endfor %}
 		{% else %}
