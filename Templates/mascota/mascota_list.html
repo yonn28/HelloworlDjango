@@ -17,8 +17,8 @@
 	</thead>
 	<tbody>
         <tr>
-		{% if mascotas %}
-		{% for mascota in mascotas %}
+		{% if object_list %}
+		{% for mascota in object_list %}
 			<td>{{mascota.id}}</td>
             <td>{{mascota.nombre}}</td>
             <td>{{mascota.sexo}}</td>
@@ -39,3 +39,4 @@
 </table> 
 
 {% endblock%}
+

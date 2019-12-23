@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from apps.mascota.forms import MascotaForm
 from django.db import models
 from .models import Mascota
+from  django.views.generic import ListView
 
 # Create your views here.
 
@@ -43,3 +44,7 @@ def mascota_delete(request, id_mascota):
         mascota.delete()
         return redirect('mascota:mascota_listar')
     return render(request,'mascota/mascota_delete.html',{'mascota':mascota})
+
+class MascotaList(ListView):
+    model=Mascota
+    template_name='mascota/mascota_list.html'
