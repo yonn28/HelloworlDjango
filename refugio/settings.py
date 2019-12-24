@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.adopcion', #esto toca adicionar ya que no las trae el framework
     'apps.mascota', # toca adicionar el framework no lo hace por defecto
+    'apps.usuario',#toca adicionar para que funcione
 ]
 
 MIDDLEWARE = [
