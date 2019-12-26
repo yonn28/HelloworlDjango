@@ -130,3 +130,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),) #esto sirve para los archivos css archivos estaticos
 
 LOGIN_REDIRECT_URL=reverse_lazy('adopcion:solicitud_listar')#esta es la vista a la que se va despues del login
+
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.outlook.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'TestDjangoail2050@outlook.com'
+EMAIL_HOST_PASSWORD = '*Abcde123'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
